@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nijin Sreeni — Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Nijin Sreeni — Electronics & Communication Engineering student specializing in Embedded Systems, IoT, and Intelligent Automation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#experience" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-cta-wrapper">
+                <a href="#contact" class="nav-cta">Let's Talk</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="grid-overlay"></div>
+        </div>
+        <div class="hero-content hero-split">
+            <div class="hero-text">
+                <p class="hero-greeting reveal">Hello, I'm</p>
+                <h1 class="hero-name reveal">Nijin Sreeni</h1>
+                <div class="hero-title-wrapper reveal">
+                    <span class="hero-title-prefix">I build</span>
+                    <span class="hero-typed" id="heroTyped"></span>
+                    <span class="typed-cursor">|</span>
+                </div>
+                <div class="hero-proof reveal">
+                    <p class="proof-intro">Built 5+ embedded systems projects:</p>
+                    <ul class="proof-list">
+                        <li>AI-powered irrigation system</li>
+                        <li>Firefighter indoor tracking device</li>
+                        <li>Smart CCTV attendance system</li>
+                    </ul>
+                    <p class="proof-award">🏆 2x National Hackathon Awards</p>
+                </div>
+                <div class="hero-actions reveal">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/nijinai" class="btn btn-outline" target="_blank">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nijin-sreeni" class="btn btn-outline" target="_blank">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-visual reveal">
+                <img src="hero-hardware.jpg" alt="Vega processor board with sensors — FireTrack project" width="480"
+                    height="480">
+            </div>
+        </div>
+        <div class="hero-highlights reveal">
+            <div class="highlight-chip">
+                <span class="highlight-icon">🔧</span>
+                <span>5+ Projects</span>
+            </div>
+            <div class="highlight-divider"></div>
+            <div class="highlight-chip">
+                <span class="highlight-icon">🏆</span>
+                <span>2 Awards</span>
+            </div>
+            <div class="highlight-divider"></div>
+            <div class="highlight-chip">
+                <span class="highlight-icon">⚡</span>
+                <span>Embedded C</span>
+            </div>
+            <div class="highlight-divider"></div>
+            <div class="highlight-chip">
+                <span class="highlight-icon">📡</span>
+                <span>IoT &amp; Sensors</span>
+            </div>
+            <div class="highlight-divider"></div>
+            <div class="highlight-chip">
+                <span class="highlight-icon">🎓</span>
+                <span>ECE @ KTU</span>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+        </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">// about me</span>
+                <h2 class="section-title">Know Me <span class="accent">Better</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-wrapper reveal">
+                    <div class="about-image">
+                        <div class="about-image-placeholder">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <circle cx="12" cy="8" r="4" />
+                                <path d="M20 21a8 8 0 1 0-16 0" />
+                            </svg>
+                        </div>
+                        <div class="about-image-border"></div>
+                    </div>
+                    <div class="about-image-dots"></div>
+                </div>
+                <div class="about-info reveal">
+                    <h3 class="about-headline">
+                        An ECE student who loves building <span class="accent">real-world</span> systems
+                    </h3>
+                    <p class="about-text">
+                        I am an Electronics and Communication Engineering student who enjoys turning ideas into
+                        working technology. My main interests lie in embedded systems, IoT, and intelligent automation.
+                        I enjoy experimenting with microcontrollers, sensors, and real-world problem-solving projects
+                        that combine hardware and software.
+                    </p>
+                    <p class="about-text">
+                        I aim to build systems that sense, analyze, and respond to real-world environments —
+                        making technology more useful and efficient in areas such as smart agriculture,
+                        automation, and monitoring systems.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-count="4">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Platforms</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-count="2">0</span>
+                            <span class="stat-label">Awards</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="skills section" id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">// technical expertise</span>
+                <h2 class="section-title">Tech <span class="accent">Stack</span></h2>
+            </div>
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                            </svg>
+                        </div>
+                        <h3>Programming</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span class="skill-dot"></span>Embedded C</div>
+                        <div class="skill-item"><span class="skill-dot"></span>C (Fundamentals)</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Python (Basics)</div>
+                    </div>
+                </div>
+                <!-- Microcontroller Platforms -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="4" y="4" width="16" height="16" rx="2" />
+                                <line x1="9" y1="1" x2="9" y2="4" />
+                                <line x1="15" y1="1" x2="15" y2="4" />
+                                <line x1="9" y1="20" x2="9" y2="23" />
+                                <line x1="15" y1="20" x2="15" y2="23" />
+                                <line x1="20" y1="9" x2="23" y2="9" />
+                                <line x1="20" y1="14" x2="23" y2="14" />
+                                <line x1="1" y1="9" x2="4" y2="9" />
+                                <line x1="1" y1="14" x2="4" y2="14" />
+                            </svg>
+                        </div>
+                        <h3>Microcontrollers</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span class="skill-dot"></span>Raspberry Pi Pico W</div>
+                        <div class="skill-item"><span class="skill-dot"></span>ESP32</div>
+                        <div class="skill-item"><span class="skill-dot"></span>8051 Microcontroller</div>
+                        <div class="skill-item"><span class="skill-dot"></span>VEGA Processor</div>
+                    </div>
+                </div>
+                <!-- Development Tools -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                            </svg>
+                        </div>
+                        <h3>Development Tools</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span class="skill-dot"></span>Keil µVision</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Proteus Simulation</div>
+                        <div class="skill-item"><span class="skill-dot"></span>KiCad (PCB Design)</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Arduino IDE</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Visual Studio</div>
+                    </div>
+                </div>
+                <!-- Electronics Skills -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M2 12h4l3-9 4 18 3-9h4" />
+                                <circle cx="18" cy="12" r="0.5" />
+                            </svg>
+                        </div>
+                        <h3>Electronics</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span class="skill-dot"></span>Sensor Interfacing</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Circuit Design & Prototyping</div>
+                        <div class="skill-item"><span class="skill-dot"></span>IoT System Development</div>
+                        <div class="skill-item"><span class="skill-dot"></span>Embedded System Fundamentals</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="projects section" id="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">// my work</span>
+                <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+            </div>
+            <div class="project-filters reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="iot">IoT</button>
+                <button class="filter-btn" data-filter="embedded">Embedded</button>
+                <button class="filter-btn" data-filter="ai">AI / CV</button>
+            </div>
+            <div class="projects-grid">
+
+                <!-- Project 1: Smart Irrigation -->
+                <div class="project-card reveal" data-category="iot">
+                    <a href="project-irrigation.html" class="project-image project-img-irrigation">
+                        <div class="project-image-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                            </svg>
+                        </div>
+                    </a>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Raspberry Pi Pico W</span>
+                            <span class="project-tag">IoT</span>
+                            <span class="project-tag">Sensors</span>
+                        </div>
+                        <h3 class="project-title">Smart Wireless AI Irrigation System</h3>
+                        <p class="project-desc">An intelligent irrigation system that automates watering based on soil
+                            moisture, NPK nutrients, temperature, humidity, and rainfall data. Controls a relay-driven
+                            water pump to optimize water usage and improve agricultural efficiency.</p>
+                        <div class="project-links">
+                            <a href="project-irrigation.html" class="project-link" aria-label="View Details">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
+                                <span>View Details</span>
+                            </a>
+                            <a href="https://github.com/nijinai" class="project-link" target="_blank"
+                                aria-label="Source Code">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                </svg>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: FireTrack -->
+                <div class="project-card reveal" data-category="embedded">
+                    <a href="project-firetrack.html" class="project-image project-img-firetrack">
+                        <div class="project-image-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path
+                                    d="M12 2c1 3 2.5 3.5 3.5 4.5A5 5 0 0 1 17 10c0 3.5-2.5 6-5 6s-5-2.5-5-6c0-1 .5-2 1-3 1 2 2 3 3-1z" />
+                                <path d="M10 15.5c1 .5 2 .5 3 0" />
+                            </svg>
+                        </div>
+                    </a>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">IMU</span>
+                            <span class="project-tag">RFID</span>
+                            <span class="project-tag">Kalman Filter</span>
+                            <span class="project-tag">WiFi</span>
+                        </div>
+                        <h3 class="project-title">FireTrack — Firefighter Localization & Health Monitor</h3>
+                        <p class="project-desc">A hybrid indoor tracking system using boot-mounted IMU for dead
+                            reckoning, RFID anchors for position correction via Kalman filter fusion, plus vital sign
+                            monitoring (heart rate, body temperature). Includes a real-time WiFi dashboard for rescue
+                            coordination.</p>
+                        <div class="project-links">
+                            <a href="project-firetrack.html" class="project-link" aria-label="View Details">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
+                                <span>View Details</span>
+                            </a>
+                            <a href="https://github.com/nijinai" class="project-link" target="_blank"
+                                aria-label="Source Code">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                </svg>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: AI CCTV Attendance -->
+                <div class="project-card reveal" data-category="ai">
+                    <div class="project-image project-img-cctv">
+                        <div class="project-image-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path
+                                    d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                                <circle cx="12" cy="13" r="4" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Computer Vision</span>
+                            <span class="project-tag">AI</span>
+                            <span class="project-tag">Startup</span>
+                        </div>
+                        <h3 class="project-title">AI CCTV Attendance — Christ Silicon AI</h3>
+                        <p class="project-desc">An early-stage startup project converting existing CCTV infrastructure
+                            into automated AI-powered attendance systems. Uses facial recognition to integrate directly
+                            with installed cameras — enabling seamless, scalable attendance monitoring without
+                            additional hardware.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/nijinai" class="project-link" target="_blank"
+                                aria-label="Source Code">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                </svg>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: 3D Body Scanner -->
+                <div class="project-card reveal" data-category="embedded">
+                    <div class="project-image project-img-scanner">
+                        <div class="project-image-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                                <line x1="12" y1="22.08" x2="12" y2="12" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">3D Scanning</span>
+                            <span class="project-tag">Automation</span>
+                            <span class="project-tag">Confidential</span>
+                        </div>
+                        <h3 class="project-title">Human-Sized 3D Body Scanner</h3>
+                        <p class="project-desc">A human-sized 3D scanning system designed to capture accurate body
+                            measurements for a garment stitching company. Eliminates manual measurement errors by
+                            generating precise digital body dimensions through automated scanning and processing.</p>
+                        <div class="project-links">
+                            <span class="project-link project-link-muted">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                                </svg>
+                                <span>Confidential</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: BSF Recycler -->
+                <div class="project-card reveal" data-category="iot">
+                    <div class="project-image project-img-bsf">
+                        <div class="project-image-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path
+                                    d="M12 3v2m0 14v2M5.636 5.636l1.414 1.414m9.9 9.9l1.414 1.414M3 12h2m14 0h2M5.636 18.364l1.414-1.414m9.9-9.9l1.414-1.414" />
+                                <circle cx="12" cy="12" r="4" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Automation</span>
+                            <span class="project-tag">Sustainability</span>
+                            <span class="project-tag">Concept</span>
+                        </div>
+                        <h3 class="project-title">Autonomous Black Soldier Fly Organic Recycler</h3>
+                        <p class="project-desc">A conceptualized system that automates organic waste recycling using
+                            Black Soldier Fly larvae. Converts organic waste into compost and protein-rich feed while
+                            improving waste management efficiency.</p>
+                        <div class="project-links">
+                            <span class="project-link project-link-muted">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <line x1="12" y1="8" x2="12" y2="12" />
+                                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                                </svg>
+                                <span>Concept Stage</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== ACHIEVEMENTS ===================== -->
+    <section class="achievements section" id="achievements">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">// recognition</span>
+                <h2 class="section-title">Awards & <span class="accent">Achievements</span></h2>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card reveal">
+                    <div class="achievement-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="12" cy="8" r="7" />
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                        </svg>
+                    </div>
+                    <div class="achievement-position">3rd Place</div>
+                    <h3 class="achievement-title">Carbon X Vegathon Hackathon</h3>
+                    <p class="achievement-org">C-DAC (Centre for Development of Advanced Computing)</p>
+                    <p class="achievement-venue">Rajagiri School of Engineering and Technology</p>
+                    <p class="achievement-detail">Projects developed using the VEGA Processor platform</p>
+                </div>
+                <div class="achievement-card reveal">
+                    <div class="achievement-icon achievement-icon-gold">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                    </div>
+                    <div class="achievement-position">Best Design Award</div>
+                    <h3 class="achievement-title">Automated Irrigation System Project</h3>
+                    <p class="achievement-org">SAEINDIA Southern Section National Level Competition on Embedded Systems
+                        2025</p>
+                    <p class="achievement-venue">Christ College of Engineering</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section class="experience section" id="experience">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">// my journey</span>
+                <h2 class="section-title">Education & <span class="accent">Interests</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Class X</span>
+                        <h3 class="timeline-title">Secondary Education</h3>
+                        <p class="timeline-company">Santhinikethan Public School, Irinjalakuda, Thrissur, Kerala</p>
+                        <p class="timeline-desc">Completed secondary education, developing early interest in science and
+                            technology.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Class XI – XII</span>
+                        <h3 class="timeline-title">Higher Secondary Education</h3>
+                        <p class="timeline-company">Don Bosco Higher Secondary School, Irinjalakuda, Thrissur, Kerala
+                        </p>
+                        <p class="timeline-desc">Completed higher secondary education with a focus on Science stream,
+                            building a strong foundation in Mathematics and Physics.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024 — 2028 (Expected)</span>
+                        <h3 class="timeline-title">B.Tech in Electronics &amp; Communication Engineering</h3>
+                        <p class="timeline-company">Christ College of Engineering, Irinjalakuda</p>
+                        <p class="timeline-desc">Affiliated to APJ Abdul Kalam Technological University (KTU), Kerala.
+                            Focused on embedded systems, IoT, signal processing, and VLSI design. Active in technical
+                            clubs and hackathons.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interests -->
+            <div class="interests-section reveal">
+                <h3 class="interests-title">Beyond Engineering</h3>
+                <div class="interests-grid">
+                    <div class="interest-item">
+                        <span class="interest-icon">⚡</span>
+                        <span>Embedded Systems & IoT</span>
+                    </div>
+                    <div class="interest-item">
+                        <span class="interest-icon">🔧</span>
+                        <span>Electronics Prototyping</span>
+                    </div>
+                    <div class="interest-item">
+                        <span class="interest-icon">📈</span>
+                        <span>Financial Markets & Trading Analysis</span>
+                    </div>
+                    <div class="interest-item">
+                        <span class="interest-icon">🧘</span>
+                        <span>Yoga & Wellness</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">// get in touch</span>
+                <h2 class="section-title">Let's Work <span class="accent">Together</span></h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <p class="contact-text">
+                        I'm currently looking for internship opportunities in embedded systems, IoT, and automation.
+                        Whether you have a project idea, a collaboration opportunity, or just want to connect —
+                        my inbox is always open!
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:nijinsreeni.work@gmail.com"
+                                    class="contact-value">nijinsreeni.work@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">Phone</span>
+                                <a href="tel:+919447526006" class="contact-value">+91 9447526006</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Thrissur, Kerala, India</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/nijinai" target="_blank" class="social-link" aria-label="GitHub">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/nijinsreeni" target="_blank" class="social-link"
+                            aria-label="LinkedIn">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form reveal" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder=" ">
+                        <label for="name">Your Name</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">Your Email</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required placeholder=" ">
+                        <label for="subject">Subject</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                        <label for="message">Your Message</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span>Send Message</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13" />
+                            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                        </svg>
+                    </button>
+                    <div class="form-status" id="formStatus"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#hero" class="footer-logo">
+                </a>
+                <p class="footer-text">Designed & Built with ❤️ by Nijin Sreeni</p>
+                <p class="footer-copyright">&copy; 2026 All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

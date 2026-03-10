@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Irrigation System — Nijin Sreeni</title>
+    <meta name="description"
+        content="Smart Wireless Automated Irrigation System built with Raspberry Pi Pico W — soil moisture sensing, weather API integration, keypad control, and relay-driven pump automation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-detail.css">
+</head>
+
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-bracket"></span><span class="logo-dot"></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="index.html#projects" class="nav-link active">Projects</a></li>
+                <li><a href="index.html#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="index.html#experience" class="nav-link">Education</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="index.html#contact" class="nav-cta">Let's Talk</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===================== PROJECT HERO ===================== -->
+    <section class="project-hero">
+        <div class="project-hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
+        <div class="container">
+            <a href="index.html#projects" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                <span>Back to Projects</span>
+            </a>
+            <div class="project-hero-content">
+                <div class="project-hero-tags">
+                    <span class="project-tag">Raspberry Pi Pico W</span>
+                    <span class="project-tag">IoT</span>
+                    <span class="project-tag">MicroPython</span>
+                    <span class="project-tag">Sensors</span>
+                    <span class="project-tag award-tag">🏆 Best Design Award</span>
+                </div>
+                <h1 class="project-hero-title">Smart Wireless Automated Irrigation System</h1>
+                <p class="project-hero-subtitle">An intelligent, multi-mode irrigation controller that combines
+                    real-time soil moisture sensing with weather forecast data to automate water management for
+                    precision agriculture.</p>
+                <div class="project-hero-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Competition</span>
+                        <span class="meta-value">SAEINDIA NLC-ES 2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Team</span>
+                        <span class="meta-value">Team Innovis</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Status</span>
+                        <span class="meta-value status-complete">Completed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PROJECT GALLERY ===================== -->
+    <section class="project-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-main">
+                    <img src="irrigation-setup.jpg" alt="Irrigation system setup at SAEINDIA competition"
+                        loading="lazy">
+                    <div class="gallery-caption">System demonstration at SAEINDIA NLC-ES 2025</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="irrigation-demo.jpg" alt="Close-up of the irrigation system with soil sensors and pump"
+                        loading="lazy">
+                    <div class="gallery-caption">Soil sensors, water pump, and control unit</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="irrigation-working.jpg" alt="Working prototype with plants" loading="lazy">
+                    <div class="gallery-caption">Working prototype irrigating plants</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== OVERVIEW ===================== -->
+    <section class="project-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-main">
+                    <h2 class="content-title">Project Overview</h2>
+                    <p>This project addresses the challenge of inefficient water usage in agriculture by building a
+                        smart irrigation controller. The system uses a <strong>Raspberry Pi Pico W</strong> as its
+                        brain, interfacing with capacitive soil moisture sensors, a weather forecast API, a 4x4 matrix
+                        keypad, and an I2C LCD display to make intelligent irrigation decisions.</p>
+                    <p>Unlike simple timer-based systems, this controller <strong>evaluates real-time soil conditions
+                            and upcoming weather forecasts</strong> before deciding whether to irrigate — preventing
+                        unnecessary water usage when rain is expected.</p>
+
+                    <h2 class="content-title">The Problem</h2>
+                    <p>Traditional irrigation systems either rely on fixed schedules or manual intervention, leading to:
+                    </p>
+                    <ul class="content-list">
+                        <li>Overwatering and water wastage when soil is already moist</li>
+                        <li>Irrigating right before rainfall — wasting water and electricity</li>
+                        <li>Lack of real-time monitoring for farmers in remote locations</li>
+                        <li>No intelligent decision-making based on environmental conditions</li>
+                    </ul>
+
+                    <h2 class="content-title">How It Works</h2>
+                    <p>The system operates in <strong>multiple modes</strong> selectable via the keypad interface:</p>
+                    <div class="mode-cards">
+                        <div class="mode-card">
+                            <div class="mode-number">1</div>
+                            <div>
+                                <h4>Soil Moisture Mode</h4>
+                                <p>Continuously monitors soil moisture using dual capacitive sensors. Automatically
+                                    turns the pump ON when soil is dry and OFF when wet. Real-time values displayed on
+                                    LCD.</p>
+                            </div>
+                        </div>
+                        <div class="mode-card">
+                            <div class="mode-number">2</div>
+                            <div>
+                                <h4>Rain Forecast Mode</h4>
+                                <p>Fetches real-time rain probability from WeatherAPI using Wi-Fi connectivity. Displays
+                                    forecast data to help decide whether irrigation is needed.</p>
+                            </div>
+                        </div>
+                        <div class="mode-card">
+                            <div class="mode-number">3</div>
+                            <div>
+                                <h4>Hybrid Mode (Soil + Rain)</h4>
+                                <p>The smartest mode — combines soil moisture readings with rain probability. Only
+                                    irrigates when soil is dry <strong>AND</strong> rain chance is below the threshold,
+                                    preventing unnecessary watering.</p>
+                            </div>
+                        </div>
+                        <div class="mode-card">
+                            <div class="mode-number">4/5</div>
+                            <div>
+                                <h4>Manual Override</h4>
+                                <p>Direct pump ON/OFF control for manual operation when automated control isn't needed.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Hardware Components</h3>
+                        <ul class="component-list">
+                            <li>
+                                <span class="component-icon">🔧</span>
+                                <span>Raspberry Pi Pico W</span>
+                            </li>
+                            <li>
+                                <span class="component-icon">🌱</span>
+                                <span>2× Capacitive Soil Moisture Sensors (v1.2 / v2.0)</span>
+                            </li>
+                            <li>
+                                <span class="component-icon">🔌</span>
+                                <span>5V Relay Module (Active LOW)</span>
+                            </li>
+                            <li>
+                                <span class="component-icon">💧</span>
+                                <span>5V Submersible Water Pump</span>
+                            </li>
+                            <li>
+                                <span class="component-icon">📺</span>
+                                <span>16×2 I2C LCD Display</span>
+                            </li>
+                            <li>
+                                <span class="component-icon">⌨️</span>
+                                <span>4×4 Matrix Keypad</span>
+                            </li>
+                            <li>
+                                <span class="component-icon">📡</span>
+                                <span>SIMCOM A7670C-LASS (GSM/4G Module)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Software Stack</h3>
+                        <ul class="component-list">
+                            <li><span class="component-icon">🐍</span><span>MicroPython</span></li>
+                            <li><span class="component-icon">📶</span><span>Wi-Fi (network module)</span></li>
+                            <li><span class="component-icon">🌧️</span><span>WeatherAPI (REST)</span></li>
+                            <li><span class="component-icon">🖥️</span><span>I2C LCD Driver</span></li>
+                            <li><span class="component-icon">🎹</span><span>Custom Keypad Driver</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Recognition</h3>
+                        <div class="award-badge">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                            <div>
+                                <strong>Best Design Award</strong>
+                                <span>SAEINDIA Southern Section NLC-ES 2025</span>
+                                <span>Christ College of Engineering</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CIRCUIT DIAGRAM ===================== -->
+    <section class="project-section section-alt">
+        <div class="container">
+            <h2 class="content-title center">Circuit Diagram</h2>
+            <p class="center-text">Complete wiring schematic showing the Raspberry Pi Pico W connected to all sensors,
+                peripherals, and actuators.</p>
+            <div class="circuit-diagram">
+                <img src="irrigation-circuit.jpg" alt="Circuit diagram of the Smart Irrigation System" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CODE SNIPPET ===================== -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="content-title">Key Code — Hybrid Decision Logic</h2>
+            <p>The core intelligence of the system lies in the hybrid mode, which combines soil moisture readings with
+                rain probability to make smart irrigation decisions:</p>
+            <div class="code-block">
+                <div class="code-header">
+                    <span class="code-lang">MicroPython</span>
+                    <span class="code-file">main.py — mode_both()</span>
+                </div>
+                <pre><code>def mode_both():
+    soil = read_soil()
+    rain_prob = get_rain_probability()
+    lcd.clear()
+    lcd.putstr(f"Soil:{soil}")
+    lcd.move_to(0,1)
+    if rain_prob is None:
+        lcd.putstr("Rain:Error   ")
+        return
+    lcd.putstr(f"Rain:{rain_prob}%")
+
+    # Only irrigate if soil is DRY and rain chance is LOW
+    if soil >= MOISTURE_THRESHOLD and rain_prob < RAIN_THRESHOLD:
+        irrigate_once()
+    else:
+        lcd.putstr("Skip Irrigation")
+</code></pre>
+            </div>
+            <p class="code-note">The system uses a <strong>dual-threshold approach</strong> — irrigation only triggers
+                when both conditions are met: soil moisture is below the threshold <em>and</em> rain probability is low.
+                This prevents wasteful irrigation when rain is expected.</p>
+        </div>
+    </section>
+
+    <!-- ===================== CHALLENGES ===================== -->
+    <section class="project-section section-alt">
+        <div class="container">
+            <h2 class="content-title center">Challenges & Learnings</h2>
+            <div class="challenges-grid">
+                <div class="challenge-card">
+                    <div class="challenge-icon">📡</div>
+                    <h4>Reliable Wi-Fi on Microcontroller</h4>
+                    <p>Managing Wi-Fi reconnection and API calls on the Pico W's limited memory required careful error
+                        handling and resource management.</p>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-icon">🌱</div>
+                    <h4>Sensor Calibration</h4>
+                    <p>Capacitive soil moisture sensors needed careful calibration across different soil types and
+                        moisture levels to find accurate thresholds.</p>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-icon">⚡</div>
+                    <h4>Relay Timing & Safety</h4>
+                    <p>Implementing active-low relay control with proper pump runtime limits to prevent motor burnout
+                        and water flooding.</p>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-icon">🏗️</div>
+                    <h4>3D Printed Enclosure</h4>
+                    <p>Designed and 3D-printed a custom enclosure to house all electronics, with cutouts for the LCD,
+                        keypad, antenna, and sensor cables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="project-section">
+        <div class="container">
+            <div class="project-cta">
+                <h2>Interested in this project?</h2>
+                <p>Feel free to reach out if you'd like to discuss the technical details, collaborate on similar IoT
+                    projects, or explore embedded systems together.</p>
+                <div class="cta-buttons">
+                    <a href="https://github.com/nijinai" class="btn btn-primary" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                        </svg>
+                        <span>View on GitHub</span>
+                    </a>
+                    <a href="index.html#contact" class="btn btn-outline">
+                        <span>Get In Touch</span>
+                    </a>
+                    <a href="index.html#projects" class="btn btn-outline">
+                        <span>More Projects</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="index.html" class="footer-logo">
+                </a>
+                <p class="footer-text">Designed & Built with ❤️ by Nijin Sreeni</p>
+                <p class="footer-copyright">&copy; 2026 All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

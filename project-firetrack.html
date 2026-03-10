@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FireTrack — Firefighter Localization & Health Monitor — Nijin Sreeni</title>
+    <meta name="description"
+        content="FireTrack — A hybrid indoor firefighter tracking and health monitoring system using IMU dead reckoning, RFID anchors, Kalman filter fusion, and vital sign monitoring with a real-time WiFi dashboard.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-detail.css">
+</head>
+
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="index.html#projects" class="nav-link active">Projects</a></li>
+                <li><a href="index.html#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="index.html#experience" class="nav-link">Education</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="index.html#contact" class="nav-cta">Let's Talk</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===================== PROJECT HERO ===================== -->
+    <section class="project-hero">
+        <div class="project-hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
+        <div class="container">
+            <a href="index.html#projects" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                <span>Back to Projects</span>
+            </a>
+            <div class="project-hero-content">
+                <div class="project-hero-tags">
+                    <span class="project-tag">VEGA RISC-V</span>
+                    <span class="project-tag">IMU</span>
+                    <span class="project-tag">RFID</span>
+                    <span class="project-tag">Kalman Filter</span>
+                    <span class="project-tag">WiFi Dashboard</span>
+                    <span class="project-tag award-tag">🏅 3rd Place — Carbon X Vegathon</span>
+                </div>
+                <h1 class="project-hero-title">FireTrack — Hybrid Indoor Firefighter Localization &amp; Health Monitor
+                </h1>
+                <p class="project-hero-subtitle">A wearable embedded system that tracks firefighters inside burning
+                    buildings using dead reckoning and RFID-corrected positioning, while monitoring vital signs in
+                    real-time through a command center dashboard.</p>
+                <div class="project-hero-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Competition</span>
+                        <span class="meta-value">Carbon X Vegathon — C-DAC</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Platform</span>
+                        <span class="meta-value">VEGA Processor (RISC-V)</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Status</span>
+                        <span class="meta-value status-complete">Completed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PROJECT GALLERY ===================== -->
+    <section class="project-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-main">
+                    <img src="firetrack-dashboard.jpg"
+                        alt="FireTrack command dashboard showing live PDR tracker and vitals" loading="lazy">
+                    <div class="gallery-caption">Firefighter Command Dashboard with live tracking & vitals</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="firetrack-rfid.jpg" alt="RFID module and OLED display showing navigation data"
+                        loading="lazy">
+                    <div class="gallery-caption">Wearable unit — RFID reader, OLED display showing position</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="firetrack-prototype.jpg" alt="Complete FireTrack prototype with all sensors"
+                        loading="lazy">
+                    <div class="gallery-caption">Full wearable prototype with VEGA processor & sensor array</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== OVERVIEW ===================== -->
+    <section class="project-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-main">
+                    <h2 class="content-title">Project Overview</h2>
+                    <p>When firefighters enter a burning building, GPS signals are blocked. Incident commanders on the
+                        outside have <strong>no way to know</strong> where their crew members are, whether they're
+                        moving, or if they need medical attention.</p>
+                    <p>FireTrack solves this by combining <strong>IMU-based dead reckoning</strong> with <strong>RFID
+                            anchor correction</strong> and <strong>Kalman filter sensor fusion</strong> to provide
+                        reliable indoor positioning — even in GPS-denied, smoke-filled environments. A real-time WiFi
+                        dashboard displays each firefighter's location, path history, and vital signs.</p>
+
+                    <h2 class="content-title">The Problem</h2>
+                    <p>Indoor firefighter safety is a critical challenge with multiple failure points:</p>
+                    <ul class="content-list">
+                        <li>GPS does not work inside buildings — incident commanders are blind</li>
+                        <li>Radio communication can be unreliable in multi-story structures</li>
+                        <li>No real-time health monitoring for heat stress or cardiac events</li>
+                        <li>Dead reckoning alone drifts over time without correction points</li>
+                        <li>Existing solutions require expensive infrastructure changes</li>
+                    </ul>
+
+                    <h2 class="content-title">System Architecture</h2>
+                    <p>The system operates in <strong>three layers</strong> — each handling a specific aspect of
+                        tracking and monitoring:</p>
+                    <div class="mode-cards">
+                        <div class="mode-card">
+                            <div class="mode-number">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M2 12h4l3-9 4 18 3-9h4" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Sensing Layer</h4>
+                                <p>Boot-mounted <strong>IMU (MPU9250)</strong> detects footsteps and heading via
+                                    accelerometer + gyroscope. <strong>RFID reader</strong> scans passive anchor tags at
+                                    known positions. <strong>MAX30102</strong> and <strong>LM35</strong> sensors monitor
+                                    heart rate and body temperature.</p>
+                            </div>
+                        </div>
+                        <div class="mode-card">
+                            <div class="mode-number">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="4" y="4" width="16" height="16" rx="2" />
+                                    <line x1="9" y1="1" x2="9" y2="4" />
+                                    <line x1="15" y1="1" x2="15" y2="4" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Processing & Localization Layer</h4>
+                                <p>The <strong>VEGA RISC-V processor</strong> runs step detection, heading estimation
+                                    (dead reckoning), and applies a <strong>Kalman filter</strong> to fuse IMU data with
+                                    RFID anchor positions — correcting drift errors in real-time.</p>
+                            </div>
+                        </div>
+                        <div class="mode-card">
+                            <div class="mode-number">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                                    <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                                    <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                                    <circle cx="12" cy="20" r="1" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Communication & Dashboard Layer</h4>
+                                <p><strong>ESP8266 WiFi module</strong> creates a local access point and web server. The
+                                    command center dashboard displays a <strong>floor map with live position, path
+                                        history, vital signs</strong>, and emergency alerts (e.g., "MAN DOWN — NO
+                                    MOVEMENT").</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Hardware Components</h3>
+                        <ul class="component-list">
+                            <li>
+                                <span class="component-icon">🔧</span>
+                                <span>VEGA RISC-V Processor (C-DAC Aries V2)</span>
+                            </li>
+                            <li>
+                                <span class="component-icon">📐</span>
+                                <span>IMU Sensor (MPU9250 — 9-axis)</span>
+                            </li>
+                            <li>
+                                <span class="component-icon">📡</span>
+                                <span>RFID Reader Module (RC522)</span>
+                            </li>
+                            <li>
+                                <span class="component-icon">🏷️</span>
+                                <span>Passive RFID Anchor Tags</span>
+                            </li>
+                            <li>
+                                <span class="component-icon">❤️</span>
+                                <span>Heart Rate Sensor (MAX30102)</span>
+                            </li>
+                            <li>
+                                <span class="component-icon">🌡️</span>
+                                <span>Temperature Sensor (LM35)</span>
+                            </li>
+                            <li>
+                                <span class="component-icon">📶</span>
+                                <span>WiFi Module (ESP8266)</span>
+                            </li>
+                            <li>
+                                <span class="component-icon">🔋</span>
+                                <span>Li-ion Battery + Buck Converter</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Key Algorithms</h3>
+                        <ul class="component-list">
+                            <li><span class="component-icon">🚶</span><span>Pedestrian Dead Reckoning (PDR)</span></li>
+                            <li><span class="component-icon">🔄</span><span>Kalman Filter Sensor Fusion</span></li>
+                            <li><span class="component-icon">📍</span><span>RFID Anchor Position Correction</span></li>
+                            <li><span class="component-icon">⚠️</span><span>"Man Down" Motion Detection</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Recognition</h3>
+                        <div class="award-badge">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <circle cx="12" cy="8" r="7" />
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                            </svg>
+                            <div>
+                                <strong>3rd Place</strong>
+                                <span>Carbon X Vegathon Hackathon</span>
+                                <span>C-DAC — Rajagiri School of Engg.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== BLOCK DIAGRAM ===================== -->
+    <section class="project-section section-alt">
+        <div class="container">
+            <h2 class="content-title center">System Block Diagram</h2>
+            <p class="center-text">Three-layer architecture: Sensing → Processing & Localization → Communication &
+                Monitoring.</p>
+            <div class="circuit-diagram">
+                <img src="firetrack-blockdiagram.jpg" alt="FireNav Indoor Tracking System — Technical Block Diagram"
+                    loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CODE SNIPPET ===================== -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="content-title">Key Code — Dead Reckoning & RFID Correction</h2>
+            <p>The core navigation logic uses step detection from the IMU to update position via dead reckoning, then
+                corrects drift when an RFID anchor is scanned:</p>
+            <div class="code-block">
+                <div class="code-header">
+                    <span class="code-lang">C / Arduino</span>
+                    <span class="code-file">main.ino — Core Navigation Loop</span>
+                </div>
+                <pre><code>void loop()
+{
+    readIMU();
+
+    // Step Detection → Dead Reckoning
+    if(detectStep())
+    {
+        heading = calculateHeading();
+        // Update position using trigonometry
+        posX = posX + stepLength * cos(heading);
+        posY = posY + stepLength * sin(heading);
+    }
+
+    // RFID Anchor → Correct accumulated drift
+    rfidTag = readRFID();
+    if(rfidTag != "")
+    {
+        correctPosition(rfidTag);  // Snap to known anchor coords
+    }
+
+    sendToDashboard();  // Push to WiFi command center
+    delay(200);
+}
+</code></pre>
+            </div>
+            <p class="code-note">The <strong>hybrid approach</strong> is key — dead reckoning provides continuous
+                tracking between anchors, while RFID tags at known positions reset accumulated drift errors. The Kalman
+                filter smoothly blends both data sources for stable position estimates.</p>
+        </div>
+    </section>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <section class="project-section section-alt">
+        <div class="container">
+            <h2 class="content-title center">How Tracking Works</h2>
+            <div class="challenges-grid">
+                <div class="challenge-card">
+                    <div class="challenge-icon">🥾</div>
+                    <h4>1. Step Detection</h4>
+                    <p>The boot-mounted IMU detects each footstep through acceleration peaks. When a step is detected,
+                        the heading (direction) is calculated from the gyroscope/compass data.</p>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-icon">📍</div>
+                    <h4>2. Dead Reckoning</h4>
+                    <p>Using the step length (~0.7m) and heading angle, the system calculates the new X/Y position using
+                        trigonometry. This runs continuously even without any infrastructure.</p>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-icon">🏷️</div>
+                    <h4>3. RFID Correction</h4>
+                    <p>Passive RFID tags pre-installed at known locations (doorways, stairwells) are scanned
+                        automatically. When detected, the system snaps position to the known anchor coordinates.</p>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-icon">🔄</div>
+                    <h4>4. Kalman Fusion</h4>
+                    <p>A Kalman filter smoothly blends the continuous dead reckoning data with discrete RFID
+                        corrections, producing stable position estimates with bounded error.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== DASHBOARD ===================== -->
+    <section class="project-section">
+        <div class="container">
+            <h2 class="content-title center">Command Center Dashboard</h2>
+            <p class="center-text">A web-based dashboard served locally over WiFi, showing real-time firefighter
+                position, vital signs, and emergency alerts.</p>
+            <div class="challenges-grid">
+                <div class="challenge-card">
+                    <div class="challenge-icon">🗺️</div>
+                    <h4>Live Floor Map</h4>
+                    <p>Shows the firefighter's real-time position on a building floor plan with path history trace.
+                        Updates every 200ms for smooth tracking.</p>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-icon">❤️</div>
+                    <h4>Vital Signs Monitor</h4>
+                    <p>Displays heart rate (BPM), SpO2, and body temperature. Alerts if vitals exceed safe thresholds
+                        during fire operations.</p>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-icon">🚨</div>
+                    <h4>Emergency Alerts</h4>
+                    <p>"MAN DOWN — NO MOVEMENT" alert triggers automatically if no motion is detected for a configurable
+                        duration, indicating a downed firefighter.</p>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-icon">📊</div>
+                    <h4>Navigation Data</h4>
+                    <p>Shows heading, position coordinates, step count, distance traveled, and floor number — giving
+                        commanders full situational awareness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="project-section section-alt">
+        <div class="container">
+            <div class="project-cta">
+                <h2>Interested in this project?</h2>
+                <p>Want to discuss indoor localization, sensor fusion, or embedded systems for safety-critical
+                    applications? Feel free to reach out.</p>
+                <div class="cta-buttons">
+                    <a href="https://github.com/nijinai" class="btn btn-primary" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                        </svg>
+                        <span>View on GitHub</span>
+                    </a>
+                    <a href="index.html#contact" class="btn btn-outline">
+                        <span>Get In Touch</span>
+                    </a>
+                    <a href="index.html#projects" class="btn btn-outline">
+                        <span>More Projects</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="index.html" class="footer-logo">
+                </a>
+                <p class="footer-text">Designed & Built with ❤️ by Nijin Sreeni</p>
+                <p class="footer-copyright">&copy; 2026 All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
