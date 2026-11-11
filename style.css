@@ -1419,9 +1419,9 @@ a.contact-value:hover {
    ============================================ */
 .achievements-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 28px;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -1578,6 +1578,14 @@ a.contact-value:hover {
 
 .project-img-bsf {
     background: linear-gradient(135deg, #1a3320, #1a1a2e);
+}
+
+.project-img-robotics {
+    background: linear-gradient(135deg, #1e1b4b, #1a1a2e);
+}
+
+.project-img-gideon {
+    background: linear-gradient(135deg, #0d2b38, #1a1a2e);
 }
 
 /* ---- Muted project link (confidential / concept) ---- */
